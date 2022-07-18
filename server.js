@@ -7,7 +7,7 @@ var crypto = require('crypto');
 var secret = process.env.SECRET_KEY ??'';
 app.use(bodyParser.json());
 app.use(cors());
-var x;
+var x = null;
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "GET,POST, PUT, PATCH, DELETE");
